@@ -36,42 +36,46 @@ container = document.querySelector(".container");
 container.innerHTML = content[0];
 
 function handleClick(e) {
-//    document.getElementById("active").removeAttribute("id");
-    
     for (i = 0; i < buttons.length; i += 1) {
-        if (buttons[i].hasAttribute("id")){
+        if (buttons[i].hasAttribute("id")) {
             buttons[i].removeAttribute("id");
         }
     }
-    if (e.target.innerHTML === " Educate"){
+    if (e.target.innerHTML === " Educate") {
         container.innerHTML = content[0];
     }
-    
-    if (e.target.innerHTML === " Inform"){
+    if (e.target.innerHTML === " Inform") {
         container.innerHTML = content[1];
     }
-    
-    if (e.target.innerHTML === " Small Things"){
+    if (e.target.innerHTML === " Small Things") {
         container.innerHTML = content[2];
     }
-    
-     
-//    e.target.parentNode.setAttribute("id","active");
-    e.target.setAttribute("id","active");
-//    
-//    if (e.target.tagName = "I"){
-//        e.target.parentNode.setAttribute("id","active");
-//    }
-//    console.log(e.target.tagName);
-    
+    e.target.setAttribute("id", "active");
+}
+for (j = 0; j < buttons.length; j += 1) {
+    buttons[j].addEventListener("click", handleClick, false);
+}
+var imagesList, images, i;
+imagesList = [
+   "./img/educate.jpg"
+   , "./img/inform.jpg"
+   , "./img/small-things.jpg"
+   , "./img/slide-1.jpg"
+   , "./img/slide-2.jpg"
+   , "./img/slide-3.jpg"
+   , "./img/slide-4.jpg"
+];
+
+images = [];
+ 
+function preload(arr) {
+   for (i = 0; i < arr.length; i += 1) {
+      images[i] = new Image();
+      images[i].src = arr[i];
+   }
 }
 
-for (j = 0; j < buttons.length; j += 1){
-buttons[j].addEventListener("click", handleClick, false);
+preload(imagesList);
 
-}
-
-
-
-
-
+// images ready to be used;
+console.log(images[0].src + "\n" + images[1].src + "\n" + images[2].src);
