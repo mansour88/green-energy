@@ -13,6 +13,7 @@ body {
     max-width: 100rem;
 }
 
+
 /* Colors 
 Light blue: #add8e6
 Light Cyan: #e0ffff
@@ -58,8 +59,10 @@ ul {
 }
 
 .logo {
-    text-align: center;
-    background-color: #add8e6;
+
+    display: block;
+    margin: 0 auto;
+    width: 50%;
 }
 
 h1 {
@@ -96,27 +99,26 @@ p {
     text-align: center;
 }
 
-.btn span{
+.btn span {
     font-size: 0;
 }
 
 .btn span:before {
-font-family: FontAwesome;
-content: '\f02d';
-font-size: 30px;
-
+    font-family: FontAwesome;
+    content: '\f02d';
+    font-size: 30px;
 }
 
 .btn span.in:before {
-font-family: FontAwesome;
-content: '\f292';
+    font-family: FontAwesome;
+    content: '\f292';
 }
 
 .btn span.st:before {
-font-family: FontAwesome;
-content: '\f25b';
+    font-family: FontAwesome;
+    content: '\f25b';
 }
- 
+
 #active {
     color: blue;
 }
@@ -151,6 +153,7 @@ img {
 .social li a {
     color: black;
 }
+
 
 /* new clearfix */
 
@@ -193,10 +196,7 @@ img {
 }
 
 @media screen and (min-width: 60rem) {
-    .logo {
-        text-align: left;
-        padding: 2rem;
-    }
+    
     .navbar li {
         display: inline;
         float: left;
